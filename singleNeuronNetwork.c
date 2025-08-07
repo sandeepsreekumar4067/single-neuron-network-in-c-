@@ -12,14 +12,18 @@ float train_data[][2] = {
     {6,12}
 };
 
+
+
 float rand_float(void){
     return (float) rand()/(float) RAND_MAX;
 }
 
+
+
 int main()
 {
-    srand(time(NULL));
-    float intial_random_weight = rand_float()*10.0f;
+    srand(5000);
+    float intial_random_weight = 1.0f + rand_float()*9.0f;// to make the numbers generate between 1 and 10 . im just gonna rawdog a constant .
     printf("Generated Weight : %f \n ",intial_random_weight);
-    return 0;
+    return 0;       
 }
